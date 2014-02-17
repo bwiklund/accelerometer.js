@@ -1,16 +1,5 @@
-fmjs
-====
+# accelerometer.js
 
-a boilerplate node project with the stuff I like.
+A demo of HTML5 accelerometer access.
 
-uses node, express, connect-assets, coffeescript, and stylus.
-
-```
-coffee app.coffee [port]
-```
-
-or, for production or you havent got coffeescript installed globally:
-
-```
-node index.js [port]
-```
+Tested on OSX Chrome. Pull requests and browser/os compatability bug reports are welcome.
