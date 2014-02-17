@@ -2,5 +2,10 @@ html
   head
     title fmjs
     != css('style')
+    script(src="/vendor/angular.min.js")
     != js('client')
-  body test
+  body(ng-app="accelerometer",ng-controller="MainCtrl")
+    ul
+      li(ng-repeat="dim in ['x','y','z']")
+        span.legend {{dim}}
+        span.value {{ formatAxisValue(dim) }}
