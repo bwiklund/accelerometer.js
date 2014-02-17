@@ -4,8 +4,11 @@ html
     != css('style')
     script(src="/vendor/angular.min.js")
     != js('client')
+    meta(name="viewport",content="width=device-width")
+
   body(ng-app="accelerometer",ng-controller="MainCtrl")
-    ul
+    ul.vec(ng-repeat="vec in ['acc','vel','pos']")
+      h2 {{vec}}
       li(ng-repeat="dim in ['x','y','z']")
-        span.legend {{dim}}
-        span.value {{ formatAxisValue(dim) }}
+        span.legend {{ dim }}
+        span.value {{ formatAxisValue( accelerometer[ vec ][ dim ] ) }}
